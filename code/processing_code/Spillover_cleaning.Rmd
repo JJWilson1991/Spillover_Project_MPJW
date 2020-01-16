@@ -60,3 +60,8 @@ swa<-Spillover_Mainsheet2 %>% subset(is.na(Spillover_Mainsheet2$Host_Width_new))
 Spillover_Mainsheet3<- bind_rows(swn, swb, swr, swa)
 
 ```
+```{r}
+Spillover_Mainsheet3$Cell_Receptor[Spillover_Mainsheet3$Cell_Receptor=="?DG"] <- "alpha-DG"
+
+
+```
