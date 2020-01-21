@@ -1,7 +1,7 @@
 "0","glimpse(Spillover_Mainsheet)"
 "1","Observations: 89
 "
-"1","Variables: 27
+"1","Variables: 30
 "
 "1","$ Virus_Name                [3m[38;5;246m<chr>[39m[23m ""Allpaahuayo_virus"", ""Amapari_virus"", ""Bear_Can...
 "
@@ -18,10 +18,16 @@
 "1","$ Zoonotic                  [3m[38;5;246m<chr>[39m[23m ""n"", ""n"", ""n"", ""n"", ""y"", ""y"", ""n"", ""y"", ""y"", ""n...
 "
 "1",""
-"1","$ `Cross-species spillover` [3m[38;5;246m<chr>[39m[23m ""n"", ""n"", ""n"", ""n"", ""n"", ""y"", ""n"", ""y"", ""y"", ""n...
+"1","$ `Cross-species spillover` [3m[38;5;246m<chr>[39m[23m ""n"", ""n"", ""n"", ""n"", ""y"", ""y"", ""n"", ""y"", ""y"", ""n...
 "
 "1",""
-"1","$ Transmission              [3m[38;5;246m<chr>[39m[23m ""Vertical,Direct and indirect contact"", ""Vertic...
+"1","$ Transmission_Mechanism    [3m[38;5;246m<chr>[39m[23m ""Direct/indirect contact"", ""Direct/indirect con...
+"
+"1",""
+"1","$ Transmission_Route        [3m[38;5;246m<chr>[39m[23m ""Vertical, contact with body fluids, food, wate...
+"
+"1",""
+"1","$ Shedding_Route            [3m[38;5;246m<chr>[39m[23m ""Saliva, urine, nasal secretions"", ""Saliva, uri...
 "
 "1",""
 "1","$ Vector                    [3m[38;5;246m<chr>[39m[23m ""n"", ""n"", ""n"", ""n"", ""n"", ""n"", ""n"", ""n"", ""n"", ""n...
@@ -39,7 +45,7 @@
 "1","$ Strended                  [3m[38;5;246m<chr>[39m[23m ""SS"", ""SS"", ""SS"", ""SS"", ""SS"", ""SS"", ""SS"", ""SS"",...
 "
 "1",""
-"1","$ `Virus size (nm)`         [3m[38;5;246m<chr>[39m[23m ""70-180"", ""110-130"", ""110-130"", ""110-130"", ""110...
+"1","$ `Virus diameter (nm)`     [3m[38;5;246m<chr>[39m[23m ""70-180"", ""110-130"", ""110-130"", ""110-130"", ""110...
 "
 "1",""
 "1","$ Envelope                  [3m[38;5;246m<chr>[39m[23m ""enveloped"", ""enveloped"", ""enveloped"", ""envelop...
@@ -54,7 +60,7 @@
 "1","$ Replication_Site          [3m[38;5;246m<chr>[39m[23m ""Lymphnodes"", ""Lymphnodes"", ""Lymphnodes"", ""Lymp...
 "
 "1",""
-"1","$ Spread_Mechanism          [3m[38;5;246m<chr>[39m[23m ""Lymphnodes (Macrophages and dendritic cells)"",...
+"1","$ Within_Host_Spread        [3m[38;5;246m<chr>[39m[23m ""Lymphnodes (Macrophages and dendritic cells)"",...
 "
 "1",""
 "1","$ Entry_Mechanism           [3m[38;5;246m<chr>[39m[23m ""unknown"", ""Endocytosis (clathrin-dependent)"", ...
@@ -66,7 +72,10 @@
 "1","$ Receptor_Distribution     [3m[38;5;246m<chr>[39m[23m ""unknown"", ""Proliferating cells"", ""unknown"", ""P...
 "
 "1",""
-"1","$ Shedding_Length           [3m[38;5;246m<chr>[39m[23m ""Life-long shedding"", ""Life-long shedding"", ""Li...
+"1","$ Shedding_Period           [3m[38;5;246m<chr>[39m[23m ""Life-long"", ""Life-long"", ""Life-long"", ""Life-lo...
+"
+"1",""
+"1","$ Shedding_Length           [3m[38;5;246m<chr>[39m[23m ""Persistent"", ""Persistent"", ""Persistent"", ""Pers...
 "
 "1",""
 "1","$ Mortality_Rate            [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""20...
@@ -190,7 +199,7 @@
 "1","
 "
 "1"," [4]"
-"1"," ""?DG""                                                                           "
+"1"," ""αDG""                                                                           "
 "1","
 "
 "1"," [5]"
@@ -202,7 +211,7 @@
 "1","
 "
 "1"," [7]"
-"1"," ""Sialic acid""                                                                   "
+"1"," ""Sialic acid molecule""                                                          "
 "1","
 "
 "1"," [8]"
@@ -222,54 +231,46 @@
 "1","
 "
 "1","[12]"
-"1"," ""Sialic acid residues""                                                          "
-"1","
-"
-"1","[13]"
 "1"," ""Nucleolin""                                                                     "
 "1","
 "
-"1","[14]"
-"1"," ""Sialic acid molecule""                                                          "
-"1","
-"
-"1","[15]"
+"1","[13]"
 "1"," ""Cellular glycosaminoglycans or heparin-like molecules""                         "
 "1","
 "
-"1","[16]"
+"1","[14]"
 "1"," NA                                                                              "
 "1","
 "
-"1","[17]"
+"1","[15]"
 "1"," ""Ephrin B2\nEphrin B3""                                                          "
 "1","
 "
-"1","[18]"
-"1"," ""NeuAc?-2,3Gal""                                                                 "
+"1","[16]"
+"1"," ""NeuAcα-2,3Gal""                                                                 "
 "1","
 "
-"1","[19]"
+"1","[17]"
 "1"," ""nAchR\n NCAM\n""                                                                "
 "1","
 "
-"1","[20]"
+"1","[18]"
 "1"," ""RET\nEpoR\nNMDA\nSYN1\nSYN2\nEAAT\nCASK""                                       "
 "1","
 "
-"1","[21]"
+"1","[19]"
 "1"," ""LDL""                                                                           "
 "1","
 "
-"1","[22]"
+"1","[20]"
 "1"," ""nAchR\n NCAM\np75NTR\n""                                                        "
 "1","
 "
-"1","[23]"
+"1","[21]"
 "1"," ""LDLR""                                                                          "
 "1","
 "
-"1","[24]"
+"1","[22]"
 "1"," ""nAchR\n NCAM\np75NTR\nmGluR2""                                                  "
 "1","
 "
