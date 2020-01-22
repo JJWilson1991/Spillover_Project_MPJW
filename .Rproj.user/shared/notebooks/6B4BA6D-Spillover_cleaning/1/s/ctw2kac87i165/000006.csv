@@ -1,5 +1,0 @@
-"0","Spillover_Mainsheet5 <- Spillover_Mainsheet5 %>% mutate(Rep_site_factor=recode(Rep_site_factor, ""Respiratory tract epithelium"" = ""Respiratory_Epithelium"", ""Upper and lower respiratory tract epithelium"" = ""Respiratory_Epithelium"", ""Lungs (bronquiolar epithelial cells)"" = ""Respiratory_Epithelium"", ""Lungs (bronchial epithelial cells)"" = ""Respiratory_Epithelium""  ,""Upper and lower respiratory tract epithelium""=""Respiratory_Epithelium"",  ""Respiratory ciliated epithelium""=""Respiratory_Epithelium"", ""Respiratory tract""  = ""Respiratory_Epithelium"" , ""Nasopharyngeal epithelium""  = ""Respiratory_Epithelium"",  ""Spinal cord and brain (nervous tissues)""= ""Neural_Tissue"",  ""Peripheral, central and autonomic nervous systems (astrocytes, Schwann cells, ependymal cells)"" = ""Neural_Tissue"", ""Striated or connective tissue at the inoculation site"" = ""Muscle Tissue"", ""Salivary glands and regional lymph nodes"" = ""Lymphnodes and salivary glands""))
-"
-"2","Error in Spillover_Mainsheet5 %>% mutate(Rep_site_factor = recode(Rep_site_factor,  : 
-  não foi possível encontrar a função ""%>%""
-"
