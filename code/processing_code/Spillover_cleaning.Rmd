@@ -91,6 +91,12 @@ Spillover_Mainsheet6<- Spillover_Mainsheet6%>% mutate(`Virus diameter (nm)` = as
 
 virus_diameter<-ggplot(Spillover_Mainsheet6, aes(`Virus diameter (nm)`)) +geom_histogram() 
 virus_diameter
+
+Spillover_Mainsheet6<- Spillover_Mainsheet6%>% mutate(`GenomeAveLenght (bp)` = as.numeric(as.character(`GenomeAveLenght (bp)`)))
+
+genomelength<-ggplot(Spillover_Mainsheet6, aes(`GenomeAveLenght (bp)`)) + geom_histogram()
+
+genomelength
 ```
 ```{r}
 vfamily<-ggplot(Spillover_Mainsheet6, aes(Family, fill=Family)) +geom_bar()
