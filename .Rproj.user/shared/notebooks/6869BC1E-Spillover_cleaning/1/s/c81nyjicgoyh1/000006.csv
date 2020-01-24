@@ -1,0 +1,12 @@
+"0","Spillover_Mainsheet6<- Spillover_Mainsheet6%>% mutate(`GenomeAveLenght (bp)` = as.numeric(as.character(`GenomeAveLenght (bp)`)))"
+"0",""
+"0","genomelength<-ggplot(Spillover_Mainsheet6, aes(`GenomeAveLenght (bp)`)) + geom_histogram()"
+"0",""
+"0","genomelength"
+"2","Warning in gzfile(file, ""wb"") :"
+"2","
+ "
+"2"," não foi possível abrir o arquivo comprimido 'C:/Users/Marina/Documents/FMVZ-USP/INTERCÂMBIO/Spillover project/Spillover_Project_MPJW/Spillover_Project_MPJW/Spillover_Project_MPJW/Spillover_Project_MPJW/.Rproj.user/shared/notebooks/6869BC1E-Spillover_cleaning/1/s/c81nyjicgoyh1_t/45aa415f32c346a18561603d4f85db04.snapshot', motivo provável 'No such file or directory'
+"
+"2","Error in gzfile(file, ""wb"") : não é possível abrir a conexão
+"

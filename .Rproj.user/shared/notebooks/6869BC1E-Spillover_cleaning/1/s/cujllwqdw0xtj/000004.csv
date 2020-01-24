@@ -1,0 +1,7 @@
+"2","Warning in gzfile(file, ""wb"") :"
+"2","
+ "
+"2"," não foi possível abrir o arquivo comprimido 'C:/Users/Marina/Documents/FMVZ-USP/INTERCÂMBIO/Spillover project/Spillover_Project_MPJW/Spillover_Project_MPJW/Spillover_Project_MPJW/Spillover_Project_MPJW/.Rproj.user/shared/notebooks/6869BC1E-Spillover_cleaning/1/s/cujllwqdw0xtj_t/bd0b7f90a73841ff8fc495f8291bcabd.snapshot', motivo provável 'No such file or directory'
+"
+"2","Error in gzfile(file, ""wb"") : não é possível abrir a conexão
+"

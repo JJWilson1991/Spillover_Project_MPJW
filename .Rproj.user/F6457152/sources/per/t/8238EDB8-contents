@@ -50,7 +50,7 @@ Spillover_Mainsheet2<- Spillover_Mainsheet1%>% dplyr::mutate(Host_Width_new = Ho
 
 Spillover_Mainsheet2$Host_Width_new[Spillover_Mainsheet2$Host_Width_new=="Narrow (bats)"] <- "Narrow (Bats)"
 
-#now we'll recode this varibale as broaadd, naroow or restricted
+#now we'll recode this varibale as broaadd, narrow or restricted
 
 swn<-Spillover_Mainsheet2[grep("Narrow", Spillover_Mainsheet2$Host_Width_new), ]
 swn$Host_Width_new<-swn$Host_Width_new<-"Narrow"
@@ -81,3 +81,63 @@ Spillover_Mainsheet6<- Spillover_Mainsheet5 %>% dplyr::mutate(W_Host_Spr = Withi
 Spillover_Mainsheet6 <- Spillover_Mainsheet6 %>% mutate(W_Host_Spr=recode(W_Host_Spr, "Respiratory tract epithelial cells" = "Epithelial_Cells", "Epithelial cells" = "Epithelial_Cells", "Epithelial cells to lower respiratory tract" = "Epithelial_Cells", "Epithelial cells (ciliated and goblet cells)" = "Epithelial_Cells", "Lung epithelial cells to endothelium"= "Epithelial_Cells", "Through the blood" = "Mononuclear_Phagocytic_Cells", "Dendritic cells and mononuclear phagocytes (monocytes and macrophages) via lymphatic and vascular systems" = "Mononuclear_Phagocytic_Cells", "Mononuclear cells" = "Mononuclear_Phagocytic_Cells", "Lymphnodes (Macrophages and dendritic cells)" = "Mononuclear_Phagocytic_Cells", "Transynaptic spread"="Transsynaptic_Spread","Endoneurium of Schwann cells and transynaptic spread"="Transsynaptic_Spread", "Transport axonal and transynaptic through peripheral, central and autonomic nervous systems infecting astrocytes" = "Transsynaptic_Spread", "Macrophages\nLymphocytes B and T" = "Mononuclear_Phagocytic_Cells", "Lymphocytes T"="Epithelial_Cells", "Epithelial cells?"="Epithelial_Cells", "Leucocytes (neutrophils?)"="Leucocytes","Cell-to-cell (keratinocytes) and dendritic cells can carry the vrus to lymph-nodes" = "Keratinocytes", "Blood and cranial nerves" = "Trigeminal_olfactory_Nerves"))
 
 ```
+```{r}
+vis_miss(Spillover_Mainsheet6)
+summary(Spillover_Mainsheet6)
+#first thing we need to do is make our variables intot the right class. We can see lots of the numbers are actyaully coded as character- lets fix that
+Spillover_Mainsheet6<- Spillover_Mainsheet6%>% mutate(`Virus diameter (nm)` = as.numeric(as.character(`Virus diameter (nm)`)))
+
+#now we'll do a few univariate exploratory plots, basically to look at the distibution of data in each variable, so they don't need to be fancy
+
+virus_diameter<-ggplot(Spillover_Mainsheet6, aes(`Virus diameter (nm)`)) +geom_histogram() 
+virus_diameter
+
+Spillover_Mainsheet6<- Spillover_Mainsheet6%>% mutate(`GenomeAveLenght (bp)` = as.numeric(as.character(`GenomeAveLenght (bp)`)))
+
+genomelength<-ggplot(Spillover_Mainsheet6, aes(`GenomeAveLenght (bp)`)) + geom_histogram()
+
+genomelength
+```
+```{r}
+vfamily<-ggplot(Spillover_Mainsheet6, aes(Family, fill=Family)) +geom_bar()
+vfamily
+
+```
+```{r}
+
+vorder<-ggplot(Spillover_Mainsheet6, aes(Order, fill=Order)) +geom_bar()
+vorder
+
+```
+
+```{r}
+
+vgenus<-ggplot(Spillover_Mainsheet6, aes(Genus, fill=Genus)) +geom_bar()
+vgenus
+#so looking at this, our spreadsheet is probably a lil biased, theres a heck of a lot of arenas and not much else
+```
+```{r}
+
+
+within_host<-ggplot(Spillover_Mainsheet6, aes(W_Host_Spr, fill=W_Host_Spr)) +geom_bar()
+within_host
+```
+```{r}
+host_width<-ggplot(Spillover_Mainsheet6, aes(Host_Width_new, fill=Host_Width_new)) +geom_bar()
+host_width
+```
+```{r}
+transmission_route<-ggplot(Spillover_Mainsheet6, aes(Transmission_Route, fill=Transmission_Route)) +geom_bar()
+transmission_route
+```
+```{r}
+shedding_length<-ggplot(Spillover_Mainsheet6, aes(Shedding_Length, fill=Shedding_Length)) +geom_bar()
+shedding_length
+```
+
+```{r}
+host<-ggplot(Spillover_Mainsheet6, aes(Host, fill=Host)) +geom_bar()
+host
+```
+
+
